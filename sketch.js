@@ -77,11 +77,13 @@ function draw() {
   if(keyDown("RIGHT"))
   {
 	  helicopterSprite.x = helicopterSprite.x + 20;
+	  Matter.Body.translate(packageBody, {x:+20,y:0});
   }
 
   if(keyDown("LEFT"))
   {
 	  helicopterSprite.x = helicopterSprite.x - 20;
+	  Matter.Body.translate(packageBody, {x:-20,y:0});
   }
 
   Matter.Body.translate(packageBody, {x:-20,y:0});
